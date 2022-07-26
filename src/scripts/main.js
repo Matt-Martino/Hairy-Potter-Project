@@ -46,4 +46,4 @@ const thePotteryList = PotteryList()
 console.log(thePotteryList)
 
 
-//QQ - Why do my tests fail?
+

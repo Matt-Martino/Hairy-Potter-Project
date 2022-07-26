@@ -32,18 +32,18 @@ export const toSellOrNotToSell = (firedObject) => {
     if (firedObject.weight >= 6 && firedObject.cracked === false) {
         firedObject.price = 40.00
         sellableGoods.push(firedObject)
-        return firedObject
+// ** Initially I did not return the object^
+// ** and this was why my last test was failing.  I did some debuggin! 
     }
     else if (firedObject.weight < 6 && firedObject.cracked === false) {
         firedObject.price = 20.00
         sellableGoods.push(firedObject)
-        return firedObject
     }
-    return sellableGoods
+    return firedObject
 }
 
 export const usePottery = () => {
-    return sellableGoods.slice()
+    return sellableGoods.map(sellableGood => ({...sellableGood}))
 }
 console.log(sellableGoods)
 
