@@ -43,4 +43,4 @@ export const toSellOrNotToSell = (firedObject) => {
 export const usePottery = () => {
     return sellableGoods.slice()
 }
-
+console.log(sellableGoods)
