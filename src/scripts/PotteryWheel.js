@@ -47,3 +47,5 @@ export const makePottery = (shapeString, weightInteger, heightInteger) => {
     return potteryObject
     //Check back and see where it is I need to store this?
 }
+
+// QQ - Is there a better way to represent the ID counter than this?  I like this function.

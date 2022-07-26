@@ -30,14 +30,18 @@ export const PotteryList = () => {
     const useableGoods = usePottery()
     let htmlString = ``
     for (const useableGood of useableGoods){
-        htmlString += 
-        `<section class="pottery" id="pottery--1">
+        htmlString += `<section class="pottery" id="pottery--${useableGood.id}"> 
         <h2 class="pottery__shape">${useableGood.shape}</h2>
         <div class="pottery__properties">
-          Item weighs ${useableGood.weight} and is ${useableGood.height} cm in height
+          Item weighs ${useableGood.weight} grams and is ${useableGood.height} cm in height
         </div>
-        <div class="pottery__price">Price is ${useableGood.price}</div>
+        <div class="pottery__price">Price is $${useableGood.price}</div>
       </section>`
     }
     return htmlString
 }
+
+//QQ - Do I need to declare --let htmlstring = ``--  initially or will it work without it?
+//QQ - Why did I need to change the LINE33-id="pottery--${useableGood.id}">  
+//         I initially thought this would ruin some css stuff with the ID being different than initial setup
+//        BUT I am praticing debugging and linked up the errors in the termiinal so that is good???

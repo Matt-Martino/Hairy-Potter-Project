@@ -8,7 +8,7 @@ import { PotteryList } from "./PotteryList.js"
 // Make 5 pieces of pottery at the wheel
 let mug = makePottery("mug", 2, 5)
 // This ^ one is too hot!!! Hot stuff!
-let mug2 = makePottery("mug2", 22, 5.2)
+let mug2 = makePottery("mug2", 100, 5.2)
 // This ^ is my Heavy ass mug
 let mug3 = makePottery("mug3", 1.3, 2)
 let mug4 = makePottery("mug4", 2.2, 1.2)
@@ -46,4 +46,4 @@ const thePotteryList = PotteryList()
 console.log(thePotteryList)
 
 
-
+//QQ - Why do my tests fail?

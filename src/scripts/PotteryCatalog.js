@@ -30,12 +30,14 @@ let sellableGoods = []
 
 export const toSellOrNotToSell = (firedObject) => {
     if (firedObject.weight >= 6 && firedObject.cracked === false) {
-        firedObject.price = 40
+        firedObject.price = 40.00
         sellableGoods.push(firedObject)
+        return firedObject
     }
     else if (firedObject.weight < 6 && firedObject.cracked === false) {
-        firedObject.price = 20
+        firedObject.price = 20.00
         sellableGoods.push(firedObject)
+        return firedObject
     }
     return sellableGoods
 }
@@ -44,3 +46,6 @@ export const usePottery = () => {
     return sellableGoods.slice()
 }
 console.log(sellableGoods)
+
+
+//QQ - I do not know 100% why to add the .slice in here.  Is it important for this and why?
