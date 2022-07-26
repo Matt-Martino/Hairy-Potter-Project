@@ -20,13 +20,27 @@ Checking Your Work
 3rd.  if potteryObject.weight >= 6  than add price: 40
 4th.  if toSellOrNotToSell.weight <6 than add price: 20
 5th.  if cracked DO NOT ADD PRICE PROPERTY TO IT**
-6th.  if not cracked add objecto to module-level array of items to be sold.  IE add it to a sellThisShit array.
+6th.  if not cracked add object to module-level array of items to be sold.  IE add it to a sellThisShit array.
 7th.  Return the object
 
 8th.  Define a function usePottery that returns a copy of the array of items to be sold.  
 */
 
+let sellableGoods = []
 
+export const toSellOrNotToSell = (firedObject) => {
+    if (firedObject.weight >= 6 && firedObject.cracked === false) {
+        firedObject.price = 40
+        sellableGoods.push(firedObject)
+    }
+    else if (firedObject.weight < 6 && firedObject.cracked === false) {
+        firedObject.price = 20
+        sellableGoods.push(firedObject)
+    }
+    return sellableGoods
+}
 
-
+export const usePottery = () => {
+    return sellableGoods.slice()
+}
 
